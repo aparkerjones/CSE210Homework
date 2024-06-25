@@ -25,13 +25,13 @@ public class Program
                     repeat = 0;
                     break;
                 case 1:
-                    _journal.DisplayLast();
+                    _journal.DisplayLast(entries);
                     break;
                 case 2:
-                    _journal.DisplayAll();
+                    _journal.DisplayAll(entries);
                     break;
                 case 3:
-                    _journal.NewEntry(entries);
+                    Entry.NewEntry(entries);
                     break;
                 case 4:
                     
