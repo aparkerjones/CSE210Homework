@@ -2,13 +2,9 @@ using System;
 
 public class Journal
 {
-    //public string GetPrompt()
-    //{
+    
 
-    //}
-    public List<Entry> entries = new List<Entry>();
-
-    public static void NewEntry()
+    public static void NewEntry(List<Entry> entries)
     {
         string date = DateTime.Now.ToString("yyyy-MM-dd");
         string journalEntry = Console.ReadLine();
