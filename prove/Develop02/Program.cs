@@ -4,7 +4,8 @@ public class Program
 {
     public static void Main()
     {
-        Journal journal = new Journal();
+        Journal _journal = new Journal();
+        List<Entry> entries = new List<Entry>();
         int repeat = 1;
         int choice;
         
@@ -24,13 +25,13 @@ public class Program
                     repeat = 0;
                     break;
                 case 1:
-                    journal.DisplayLast();
+                    _journal.DisplayLast(entries);
                     break;
                 case 2:
-                    journal.DisplayAll();
+                    _journal.DisplayAll(entries);
                     break;
                 case 3:
-                    journal.NewEntry();
+                    Entry.NewEntry(entries);
                     break;
                 case 4:
                     

@@ -2,22 +2,10 @@ using System;
 
 public class Journal
 {
-    //public string GetPrompt()
-    //{
+    
 
-    //}
-    public List<Entry> entries = new List<Entry>();
-
-    public static void NewEntry()
-    {
-        string date = DateTime.Now.ToString("yyyy-MM-dd");
-        string journalEntry = Console.ReadLine();
-        Entry newEntry = new Entry();
-        newEntry.entry = journalEntry;
-        newEntry.date = date;
-        entries.Add(newEntry);
-    }
-    public void DisplayLast()
+    
+    public void DisplayLast(List<Entry> entries)
     {
          if (entries.Count() >= 1)
                 {
@@ -28,7 +16,7 @@ public class Journal
                     Console.WriteLine("There are no entries yet.");
                 }
     }
-    public void DisplayAll()
+    public void DisplayAll(List<Entry> entries)
     {
         foreach (Entry entry in entries)
         {
