@@ -7,11 +7,15 @@ using System.IO;
         protected string title;
         protected string genre;
         protected int agemin;
-        public Item(string _title, string _genre, int _agemin)
+        public Item()
         {
-            title = _title;
-            genre = _genre;
-            agemin =_agemin;
+            Console.WriteLine("What is the title?");
+            title = Console.ReadLine();
+            Console.WriteLine($"What is the genre of {title}?");
+            genre = Console.ReadLine();
+            Console.WriteLine($"What is the minimum recommended age for {title}?");
+            string _agemin = Console.ReadLine();
+            agemin = int.Parse(_agemin);
         }
-
+        public abstract void Display(int count);
     }
