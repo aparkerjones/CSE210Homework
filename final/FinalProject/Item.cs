@@ -1,30 +1,17 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 
-
-    class Item
+    public abstract class Item
     {
-        string name;
-        int agemin;
-        string genre;
+        protected string title;
+        protected string genre;
+        protected int agemin;
+        public Item(string _title, string _genre, int _agemin)
+        {
+            title = _title;
+            genre = _genre;
+            agemin =_agemin;
+        }
 
-        private List<Item> loadlibrary()
-        {
-            
-        }
-        private void savelibrary()
-        {
-
-        }
-        private newitem()
-        {
-
-        }
-        private removeitem()
-        {
-
-        }
-        private printlibrary()
-        {
-            
-        }
     }
