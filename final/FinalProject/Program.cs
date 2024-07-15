@@ -4,7 +4,7 @@ using System.IO;
 using System.ComponentModel.Design;
 class Program
 {
-    static void Main(string[] )
+    static void Main(string[] args )
     {
         string savefile = "homeentertainmentshelf.txt";
         Shelf shelf = new Shelf(savefile);
