@@ -1,18 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+using System.ComponentModel.Design;
 class Program
 {
-    static void Main(string[] args)
+    static void Main(string[] )
     {
-        string savefile = "homeentertainmentshelf.csv";
+        string savefile = "homeentertainmentshelf.txt";
         Shelf shelf = new Shelf(savefile);
         bool end = false;
         Console.WriteLine("Welcome to your home library management system.");
         while(end == false)
         {
-        
             List<string> options = new List<string> {"Add New Item", "Delete Item", "Display Library", "Save to File", "Discard Changes", "Exit"};
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("Menu:");
@@ -37,7 +36,7 @@ class Program
                     shelf.DisplayShelf();
                     break;
                 case 4:
-                    shelf.SaveShelf();
+                    shelf.SaveShelf(savefile);
                     break;
                 case 5:
                     shelf = new Shelf(savefile);
@@ -47,8 +46,6 @@ class Program
                     break;
                     
             }
-        
-        
         }
         
     }

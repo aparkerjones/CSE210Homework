@@ -10,6 +10,10 @@ public class Shelf
     {
         shelf = new List<Item>();
         savefile = _savefile;
+        using (File.Exists(savefile) ? File.AppendText(savefile) : new StreamWriter(savefile))
+        {
+
+        }
     }
     public void NewItem()
     {
@@ -33,16 +37,14 @@ public class Shelf
             case 3:
                 shelf.Add(new BoardGame());
                 break;
+            case 4:
+                shelf.Add(new VideoGame());
+                break;
         }
         
         Console.WriteLine("Adding Item");
         Thread.Sleep(1000);
         Console.WriteLine("Done");
-    }
-    public void SaveLibrary()
-    {
-
-        Console.WriteLine("Digital BookShelf Saved");
     }
     public void RemoveItem()
     {
@@ -50,22 +52,19 @@ public class Shelf
     }
     public void DisplayShelf()
     {
-        for(int count =1; count < shelf.Count()+1; count++)
+        for(int count =1; count - 1 < shelf.Count(); count++)
         {
             shelf[count-1].Display(count);
         }
         Thread.Sleep(5000);
     }
-    public void SaveShelf()
+    public void SaveShelf(string _savefile)
     {
-        string selection;
-        int type;
-        Console.WriteLine("Which library do you want to save?");
-        Console.WriteLine("0. All Libaries");
-        Console.WriteLine("1. Books");
-        Console.WriteLine("2. Movies");
-        Console.WriteLine("3. Board Games");
-        selection = Console.ReadLine();
-        type = int.Parse(selection);
+        savefile = _savefile;
+        using (File.Exists(savefile) ? File.AppendText(savefile) : new StreamWriter(savefile))
+        {
+            
+        }
+        Console.WriteLine("Digital BookShelf Saved");
     }
 }
