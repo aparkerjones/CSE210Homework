@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-public abstract class Game: Item
+abstract class Game: Item
 {
     protected int maxplayers;
     protected int minplayers;
@@ -18,6 +18,5 @@ public abstract class Game: Item
     }
 
     public abstract override void Display(int count);
-
     
 }

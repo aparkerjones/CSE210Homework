@@ -6,6 +6,9 @@ class Program
     {
         List<Goal> goals = new List<Goal>;
 
-        foreach ( Goal goal in goals, )
+        foreach ( Goal goal in goals)
+        {
+            
+        }
     }
 }
