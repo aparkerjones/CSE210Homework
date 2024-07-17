@@ -25,20 +25,17 @@ class Program
                     end = true;
                     break;
                 case 1:
-
+                    new Breathing();
                     break;
                 case 2:
-
+                    new Reflection();
                     break;
                 case 3:
-
-                    break;
-                
+                    new Listing();
+                    break;                
             }
+            Console.WriteLine("Good Job!");
             
         }
-
-
-
     }
 }
