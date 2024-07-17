@@ -16,7 +16,7 @@ class BoardGame : Game
     }
     public override void Display(int count)
     {
-        Console.WriteLine($"{count}. BoardGame: {title} - {genre} Minimum Age: {agemin} Players {minplayers} - {maxplayers}");
+        Console.WriteLine($"{count}. BoardGame: {title} - {genre} - Minimum Age: {agemin} Players {minplayers} - {maxplayers}");
     }
         public override string SaveData()
     {

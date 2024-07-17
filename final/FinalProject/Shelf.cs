@@ -11,6 +11,7 @@ class Shelf
         try
         {
             List<string> _shelf = [.. File.ReadAllLines(savefile)];
+            
             foreach(string item in _shelf)
             {
                 string[] _item = item.Split("|");  
@@ -46,6 +47,7 @@ class Shelf
         Console.WriteLine("1. Book");
         Console.WriteLine("2. Movie");
         Console.WriteLine("3. BoardGame");
+        Console.WriteLine("4. VideoGame");
         selection = Console.ReadLine();
         type = int.Parse(selection);
         switch(type)

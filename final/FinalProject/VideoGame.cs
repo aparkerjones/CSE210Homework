@@ -21,7 +21,7 @@ class VideoGame : Game
     }
     public override void Display(int count)
     {
-        Console.WriteLine($"{count}. VideoGame: {title} - {genre} Console: {console} Minimum Age: {agemin} Players {minplayers} - {maxplayers}");
+        Console.WriteLine($"{count}. VideoGame: {title} - {genre} - Console: {console} Minimum Age: {agemin} Players {minplayers} - {maxplayers}");
     }
     public override string SaveData()
     {

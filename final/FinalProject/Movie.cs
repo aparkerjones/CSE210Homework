@@ -21,7 +21,7 @@ class Movie: Item
     }
         public override void Display(int count)
     {
-        Console.WriteLine($"{count}. Movie: {title} - {genre} Minimum Age: {agemin} Runtime: {runtime} minutes");
+        Console.WriteLine($"{count}. Movie: {title} - {genre} - Minimum Age: {agemin} Runtime: {runtime} minutes");
     }
         public override string SaveData()
     {

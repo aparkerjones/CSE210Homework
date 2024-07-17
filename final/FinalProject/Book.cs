@@ -20,7 +20,7 @@ class Book: Item
     }
     public override void Display(int count)
     {
-        Console.WriteLine($"{count}. Book: {title}: {author} - {genre} Minimum Age: {agemin}");
+        Console.WriteLine($"{count}. Book: {title}: {author} - {genre} - Minimum Age: {agemin}");
     }
     public override string SaveData()
     {
