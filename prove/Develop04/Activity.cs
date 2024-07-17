@@ -1,5 +1,4 @@
 using System;
-
 class Activity
 {
     protected int repetitions;
@@ -14,35 +13,54 @@ class Activity
     }
     public void Spinner(int time)
     {
+        
+        string[] animationList = 
+            {"╔══╗\n║  ║\n╚══╝",
+            "╔═ ╗\n║  ║\n╚══╝",
+            "╔═  \n║  ║\n╚══╝",
+            "╔═  \n║   \n╚══╝",
+            "╔═  \n║  \n╚══ ",
+            "╔═  \n║  \n╚═  ",
+            "╔═  \n║   \n╚   ",
+            "╔═  \n║   \n    ",
+            "╔═ \n    \n    ",
+            " ═ \n    \n    ",
+            "   \n   \n    ",
+            "  ═ \n    \n    ",
+            "  ═╗\n    \n    ",
+            "  ═╗\n   ║\n    ",
+            "  ═╗\n   ║\n   ╝",
+            "  ═╗\n   ║\n  ═╝",
+            "  ═╗\n   ║\n ══╝",
+            "  ═╗\n   ║\n╚══╝",
+            "  ═╗\n║  ║\n╚══╝",
+            "╔ ═╗\n║  ║\n╚══╝",
+            "╔══╗\n║  ║\n╚══╝"}; 
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(time);
+        DateTime currentTime = DateTime.Now;
+        while(currentTime < futureTime)
+        {   
+            Console.CursorVisible = false;
+            TimeSpan timeWait = futureTime-currentTime;
+            for (int i = 0; i < animationList.Length; i++)
+               {
 
-        // Array of characters to create a spinner effect
-        char[] spinner = new char[] { '|', '/', '-', '\\' };
-
-        // Calculate the interval for each symbol (in milliseconds)
-        int interval = 250;
-
-
-        for (int j = 0; j < time; j++)
-        {
-            foreach (char symbol in spinner)
-            {
-                // Display the spinner symbol
-                Console.Write(symbol);
-
-                // Wait for the interval duration
-                Thread.Sleep(interval);
-
-                // Move the cursor back to overwrite the spinner symbol
-                Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-            }
-            Console.WriteLine(time-j);
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition(0, currentLineCursor);
-            Console.Write(new string(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
+                Thread.Sleep(50);
+                Console.CursorVisible = false;
+                Console.Write(animationList[i]);
+                Console.CursorVisible = false;
+                Console.SetCursorPosition(1,Console.CursorTop-1);
+                Console.CursorVisible = false;
+                Console.Write(timeWait.Seconds);
+                Console.CursorVisible = false;
+                Console.SetCursorPosition(0,Console.CursorTop-1);
+                Console.CursorVisible = false;
+                currentTime = DateTime.Now;
+               }
         }
-
-        // Clear the spinner symbol after completion
-        Console.Write(' ');
+        
+        Console.CursorVisible = true;
+        Console.Clear();
     }
 }
