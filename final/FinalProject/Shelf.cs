@@ -43,7 +43,7 @@ class Shelf
     {
         string selection;
         int type;
-        Console.WriteLine("What kind of entertainment are you removing?");
+        Console.WriteLine("What kind of entertainment are you adding?");
         Console.WriteLine("1. Book");
         Console.WriteLine("2. Movie");
         Console.WriteLine("3. BoardGame");
@@ -100,12 +100,12 @@ class Shelf
     }
     public void Bored()
     {
+        int players = 1;
         Random random = new();
-        int players;
         int num = random.Next(1,shelf.Count)-1;
         Item item = shelf[num-1];
         Console.WriteLine("Are you by yourself or with friends?");
-        Console.WriteLine("1. Solo");
+        Console.WriteLine("1. By myself");
         Console.WriteLine("2. With friends");
         int choice = int.Parse(Console.ReadLine());
         switch(choice)
@@ -119,7 +119,7 @@ class Shelf
                 break;
 
         }
-        if(item.minplayers >= players | item.maxplayers<= players)
+        if(item.minplayers >= players | item.maxplayers <= players)
         {
             while(item.minplayers >= players | item.maxplayers<= players)
             {

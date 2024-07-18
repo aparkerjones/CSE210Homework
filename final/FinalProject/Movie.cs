@@ -21,6 +21,8 @@ class Movie: Item
         genre = items[2];
         agemin = int.Parse(items[3]);
         runtime = int.Parse(items[4]);
+        maxplayers = int.Parse(items[5]);
+        minplayers = int.Parse(items[6]);
     }
         public override void Display(int count)
     {
@@ -28,6 +30,6 @@ class Movie: Item
     }
         public override string SaveData()
     {
-        return $"Movie|{title}|{genre}|{agemin}|{runtime}";
+        return $"Movie|{title}|{genre}|{agemin}|{runtime}|{maxplayers}|{minplayers}";
     }
 }

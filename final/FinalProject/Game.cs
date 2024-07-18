@@ -4,9 +4,6 @@ using System.IO;
 
 abstract class Game: Item
 {
-    protected int maxplayers;
-    protected int minplayers;
-    
     public Game() : base()
     {
         Console.WriteLine($"What is the minimum number of players for {title}?");

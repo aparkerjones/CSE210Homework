@@ -22,6 +22,8 @@ class Book: Item
         author = items[2];
         genre = items[3];
         agemin = int.Parse(items[4]);
+        maxplayers = int.Parse(items[5]);
+        minplayers = int.Parse(items[6]);
     }
     public override void Display(int count)
     {
@@ -29,7 +31,7 @@ class Book: Item
     }
     public override string SaveData()
     {
-        return $"Book|{title}|{author}|{genre}|{agemin}";
+        return $"Book|{title}|{author}|{genre}|{agemin}|{maxplayers}|{minplayers}";
     }
 
 }
