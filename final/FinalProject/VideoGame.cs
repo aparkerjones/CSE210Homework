@@ -12,6 +12,7 @@ class VideoGame : Game
     
     public VideoGame(string[] items) : base()
     {
+        type = "VideoGame";
         title = items[1];
         genre = items[2];
         agemin = int.Parse(items[3]);

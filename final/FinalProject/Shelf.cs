@@ -98,4 +98,36 @@ class Shelf
         Thread.Sleep(1000);
         Console.WriteLine("Digital BookShelf Saved");
     }
+    public void Bored()
+    {
+        Random random = new();
+        int players;
+        int num = random.Next(1,shelf.Count)-1;
+        Item item = shelf[num-1];
+        Console.WriteLine("Are you by yourself or with friends?");
+        Console.WriteLine("1. Solo");
+        Console.WriteLine("2. With friends");
+        int choice = int.Parse(Console.ReadLine());
+        switch(choice)
+        {
+            case 1:
+                players = 1;
+                break;
+            case 2:
+                Console.WriteLine("How many friends?");
+                players = int.Parse(Console.ReadLine());
+                break;
+
+        }
+        if(item.minplayers >= players | item.maxplayers<= players)
+        {
+            while(item.minplayers >= players | item.maxplayers<= players)
+            {
+                num = random.Next(1,shelf.Count);
+                item = shelf[num];
+            }
+        }
+        else{}
+        item.Display(num);
+    }
 }

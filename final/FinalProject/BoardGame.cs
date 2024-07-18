@@ -8,6 +8,7 @@ class BoardGame : Game
     }
     public BoardGame(string[] items) : base()
     {
+        type = "BoardGame";
         title = items[1];
         genre = items[2];
         agemin = int.Parse(items[3]);

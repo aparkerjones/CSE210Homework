@@ -8,6 +8,8 @@ abstract class Item
     protected string genre;
     protected int agemin;
     protected string type;
+    public int minplayers;
+    public int maxplayers;
     public Item()
     {
         Console.WriteLine("What is the title?");

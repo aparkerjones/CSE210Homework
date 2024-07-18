@@ -7,12 +7,17 @@ class Book: Item
     protected string author;
     public Book() : base()
     {
+        minplayers = 1;
+        maxplayers = 1;
         type = "Book";
         Console.WriteLine($"Who is the author of {title}?");
         author = Console.ReadLine();
     }
     public Book(string[] items) : base()
     {
+        minplayers = 1;
+        maxplayers = 1;
+        type = "Book";
         title = items[1];
         author = items[2];
         genre = items[3];

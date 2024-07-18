@@ -7,6 +7,8 @@ class Movie: Item
     protected int runtime = 0;
     public Movie() : base()
     {
+        minplayers = 1;
+        maxplayers = 100;
         type = "Movie";
         Console.WriteLine($"What is the running time of {title}?(in minutes)");
         string time = Console.ReadLine();
@@ -14,6 +16,7 @@ class Movie: Item
     }
         public Movie(string[] items) : base()
     {
+        type = "Movie";
         title = items[1];
         genre = items[2];
         agemin = int.Parse(items[3]);

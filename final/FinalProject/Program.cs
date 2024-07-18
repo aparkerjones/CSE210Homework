@@ -8,7 +8,7 @@ bool end = false;
 Console.WriteLine("Welcome to your home library management system.");
 while (end == false)
 {
-    List<string> options = ["Add New Item", "Delete Item", "Display Library", "Save to File", "Discard Changes", "Exit"];
+    List<string> options = ["Add New Item", "Delete Item", "Display Library", "Save to File", "Discard Changes","Pick something random to do", "Exit"];
     Console.WriteLine("What would you like to do?");
     Console.WriteLine("Menu:");
     int i = 1;
@@ -38,6 +38,9 @@ while (end == false)
             shelf = new Shelf(savefile);
             break;
         case 6:
+            shelf.Bored();
+            break;
+        case 7:
             end = true;
             break;
     }
