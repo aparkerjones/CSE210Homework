@@ -1,0 +1,5 @@
+Book|Eragon||Fantasy|12|1|1
+Movie|Spiderman|Marvel|13|200|100|1
+BoardGame|Bang|Card|10|3|6
+VideoGame|FarCry 5|Apocalyptic|13|1|1|Xbox
+Movie|Holes|Drama|13|110|100|1

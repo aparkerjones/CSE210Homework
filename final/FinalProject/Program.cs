@@ -6,8 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string savefile = "homeentertainmentshelf.txt";
-        Shelf shelf = new(savefile);
+        Shelf shelf = new();
         bool end = false;
         Console.WriteLine("Welcome to your home library management system.");
         while (end == false)
@@ -36,10 +35,10 @@ class Program
                     shelf.DisplayShelf();
                     break;
                 case 4:
-                    shelf.SaveShelf(savefile);
+                    shelf.SaveShelf();
                     break;
                 case 5:
-                    shelf = new Shelf(savefile);
+                    shelf = new Shelf();
                     break;
                 case 6:
                     shelf.Bored();
