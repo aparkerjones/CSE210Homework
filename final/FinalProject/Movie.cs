@@ -14,7 +14,7 @@ class Movie: Item
         string time = Console.ReadLine();
         runtime = int.Parse(time);
     }
-        public Movie(string[] items) : base()
+        public Movie(string[] items) : base(items)
     {
         type = "Movie";
         title = items[1];

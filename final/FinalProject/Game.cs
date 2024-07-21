@@ -13,6 +13,8 @@ abstract class Game: Item
         string _maxplayers = Console.ReadLine();
         maxplayers = int.Parse(_maxplayers);
     }
+    public Game(string[] items) : base(items)
+    {}
 
     public abstract override void Display(int count);
     

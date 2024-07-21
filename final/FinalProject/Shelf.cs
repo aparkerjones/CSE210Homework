@@ -83,7 +83,7 @@ class Shelf
         {
             shelf[count-1].Display(count);
         }
-        Thread.Sleep(5000);
+        Thread.Sleep(1000);
     }
     public void SaveShelf()
     {

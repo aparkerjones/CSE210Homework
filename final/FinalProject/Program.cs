@@ -8,7 +8,7 @@ class Program
     {
         Shelf shelf = new();
         bool end = false;
-        Console.WriteLine("Welcome to your home library management system.");
+        Console.WriteLine("Welcome to your Digital Home Library Management App.");
         while (end == false)
         {
             List<string> options = ["Add New Item", "Delete Item", "Display Library", "Save to File", "Discard Changes","Pick something random to do", "Exit"];

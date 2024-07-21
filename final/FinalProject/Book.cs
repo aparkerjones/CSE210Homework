@@ -13,7 +13,7 @@ class Book: Item
         Console.WriteLine($"Who is the author of {title}?");
         author = Console.ReadLine();
     }
-    public Book(string[] items) : base()
+    public Book(string[] items) : base(items)
     {
         minplayers = 1;
         maxplayers = 1;

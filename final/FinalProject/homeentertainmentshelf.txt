@@ -1,5 +1,10 @@
-Book|Eragon||Fantasy|12|1|1
 Movie|Spiderman|Marvel|13|200|100|1
 BoardGame|Bang|Card|10|3|6
 VideoGame|FarCry 5|Apocalyptic|13|1|1|Xbox
 Movie|Holes|Drama|13|110|100|1
+Book|Eragon|Christopher Paolini|Fantasy|12|1|1
+Book|Book of Mormon|Joseph Smith|Religious|8|1|1
+VideoGame|Halo Collection|Science Fiction|17|1|4|XBOX
+Movie|Man of Steel|DC|13|130|100|1
+BoardGame|Uno|Card|5|2|6
+BoardGame|Munchkins|TTRPG alike|8|3|8

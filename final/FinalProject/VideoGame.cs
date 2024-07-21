@@ -10,7 +10,7 @@ class VideoGame : Game
         console = Console.ReadLine();
     }
     
-    public VideoGame(string[] items) : base()
+    public VideoGame(string[] items) : base(items)
     {
         type = "VideoGame";
         title = items[1];

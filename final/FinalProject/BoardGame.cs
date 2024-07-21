@@ -6,7 +6,7 @@ class BoardGame : Game
     {
         type = "BoardGame";
     }
-    public BoardGame(string[] items) : base()
+    public BoardGame(string[] items) : base(items)
     {
         type = "BoardGame";
         title = items[1];
