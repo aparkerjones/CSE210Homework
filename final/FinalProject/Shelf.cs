@@ -5,7 +5,8 @@ using System.IO;
 class Shelf
 {
     private List<Item> shelf;
-    public Shelf(string savefile)
+    string savefile = "homeentertainmentshelf.txt";
+    public Shelf()
     {
         shelf = [];
         try
@@ -30,7 +31,6 @@ class Shelf
                         shelf.Add(new VideoGame(_item));
                         break;
                 }
-                    
             }
         }
         catch(Exception)
@@ -85,9 +85,8 @@ class Shelf
         }
         Thread.Sleep(5000);
     }
-    public void SaveShelf(string _savefile)
+    public void SaveShelf()
     {
-        string savefile = _savefile;
         using StreamWriter file = new(savefile, false);
         {
             foreach (var item in shelf)
@@ -100,34 +99,17 @@ class Shelf
     }
     public void Bored()
     {
-        int players = 1;
-        Random random = new();
-        int num = random.Next(1,shelf.Count)-1;
-        Item item = shelf[num-1];
-        Console.WriteLine("Are you by yourself or with friends?");
-        Console.WriteLine("1. By myself");
-        Console.WriteLine("2. With friends");
-        int choice = int.Parse(Console.ReadLine());
-        switch(choice)
+        int response = 0;
+        while(response ==0)
         {
-            case 1:
-                players = 1;
-                break;
-            case 2:
-                Console.WriteLine("How many friends?");
-                players = int.Parse(Console.ReadLine());
-                break;
+            Random random = new Random();
+            int num = random.Next(0,shelf.Count());
+            Item item = shelf[num];
+            item.Display(num);
+            Console.WriteLine("Do you want to do this? 0 for new item 1 for yes");
+            string _response = Console.ReadLine();
+            response = int.Parse(_response);
+        }
 
-        }
-        if(item.minplayers >= players | item.maxplayers <= players)
-        {
-            while(item.minplayers >= players | item.maxplayers<= players)
-            {
-                num = random.Next(1,shelf.Count);
-                item = shelf[num];
-            }
-        }
-        else{}
-        item.Display(num);
     }
 }
